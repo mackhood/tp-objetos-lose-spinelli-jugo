@@ -14,5 +14,9 @@ class Presentaciones {
 	method esLugarConcurrido(){
 		return capacidad > 5000
 	}
+	
+	method hastaSeptiembre(laFecha){
+		
+	}
 
 }
