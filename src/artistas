@@ -1,0 +1,21 @@
+import Cancion.*
+
+object joaquin {
+	var grupo = "Pimpinela"
+	var habilidad = 20
+	
+	method cantaEnGrupo() {
+		habilidad += 5
+	}
+	method interpretaBien(unaCancion){
+		return unaCancion.duraMasQue(300)
+		
+	}
+	
+	method cobra(presentacion){
+		if(presentacion.tocaUnoSolo()){
+			return 100
+		}
+		else return 50
+	}
+}
