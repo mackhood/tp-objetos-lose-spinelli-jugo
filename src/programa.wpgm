@@ -5,8 +5,8 @@ impor class Date.*
 program x {
   
   const cisne = new Cancion (312, “Hoy el viento 
-  se abrió quedó vacío el aire una vez más y el manantial brotó y
-  nadie está aquí y puedo ver que solo estallan las hojas al brillar”)
+  se abrio quedo vacio el aire una vez mas y el manantial broto y
+  nadie esta aqui y puedo ver que solo estallan las hojas al brillar”)
  
   const laFamilia = new Cancion (264,  “Quiero brindar por mi gente sencilla, por el amor brindo por la familia“)
   const fechaLuna = new Date( 20,04,17)
