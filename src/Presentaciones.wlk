@@ -18,11 +18,9 @@ class Presentaciones {
 	method hastaSeptiembre(laFecha){
 		
 	}
-	method cantaEngrupo (artistas) {
-	 if(artistas.size()>1)
-	   {
-	   	artistas.forEach(modificarHabilidad())
-	   }
-	}
-
+	
+	
+	method hayUnoSolo(artistas) {
+	return artistas.size () = 1
+        }
 }
