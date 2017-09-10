@@ -5,9 +5,9 @@ object joaquin {
 	var grupo = "Pimpinela"
 	var habilidad = 20
 	
-	method cantaEnGrupo() {
+	 method modificarHabilidad() {
 		habilidad += 5
-	}
+	 }
 	method interpretaBien(unaCancion){
 		return unaCancion.duraMasQue(300)
 		
@@ -25,6 +25,10 @@ object lucia{
 	var grupo = "Pimpinela"
 	var habilidad = 70
 
+
+        method modificarHabilidad() {
+		habilidad -= 20
+	 }
 	method interpretaBien(unaCancion){
 		return unaCancion.contiene("familia")
 	}
@@ -52,6 +56,7 @@ object luisAlberto{
 	var habilidad
 	var valorDeLaGuitarra
 	
+	method modificarHabilidad() {}
 	method usaLaFender(){
 		valorDeLaGuitarra = 10
 	}
