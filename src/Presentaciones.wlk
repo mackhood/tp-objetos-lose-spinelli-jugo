@@ -19,7 +19,7 @@ class Presentaciones {
 		
 	}
 	method cantaEngrupo (artistas) {
-	 return   artistas.size() >2
+	 return   artistas.size() >1
 	}
 
 }
