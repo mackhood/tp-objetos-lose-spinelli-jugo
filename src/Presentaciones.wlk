@@ -26,4 +26,8 @@ class Presentaciones {
 	 {
 		return artistas.size () = 1
      }
+     
+     
+     method costoPresentacion () {
+     }
 }
