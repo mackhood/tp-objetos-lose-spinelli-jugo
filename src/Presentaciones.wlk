@@ -20,7 +20,8 @@ class Presentaciones {
 	}
 	
 	
-	method hayUnoSolo(artistas) {
-	return artistas.size () = 1
-        }
+	method hayUnoSolo(artistas)
+	 {
+		return artistas.size () = 1
+     }
 }
