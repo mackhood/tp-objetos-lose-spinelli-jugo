@@ -1,7 +1,7 @@
 class Presentaciones {
 	
 	var capacidad
-	var fecha
+	var fecha = new Date (dia,mes,anio)
 	var artistas = #{}
 
 	
@@ -16,6 +16,8 @@ class Presentaciones {
 	}
 	
 	method hastaSeptiembre(laFecha){
+	
+	return ((laFecha.mes = 09)and(laFecha.anio =2017))
 		
 	}
 	
