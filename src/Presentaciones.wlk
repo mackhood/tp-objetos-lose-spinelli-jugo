@@ -2,7 +2,7 @@ class Presentaciones {
 	
 	var capacidad
 	var fecha
-	var artistas
+	var artistas = #{}
 
 	
 	constructor(laCapacidad, laFecha, losArtistas){
@@ -17,6 +17,9 @@ class Presentaciones {
 	
 	method hastaSeptiembre(laFecha){
 		
+	}
+	method cantaEngrupo (artistas) {
+	 return   artistas.size() >2
 	}
 
 }
