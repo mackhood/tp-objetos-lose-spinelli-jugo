@@ -5,6 +5,15 @@ object joaquin {
 	var grupo = "Pimpinela"
 	var habilidad = 20
 	
+	
+	method cantaPresentacion (unaPresentacion) {
+	if( unaPresentacion.hayUnoSolo() )
+	     {  self.modificarHabilidad()
+	             }
+	else { return habilidad 
+	}
+	}
+	
 	 method modificarHabilidad() {
 		habilidad += 5
 	 }
@@ -14,7 +23,7 @@ object joaquin {
 	}
 	
 	method cobra(presentacion){
-		if(presentacion.tocaUnoSolo()){
+		if(presentacion.hayUnoSolo()){
 			return 100
 		}
 		else return 50
@@ -25,7 +34,14 @@ object lucia{
 	var grupo = "Pimpinela"
 	var habilidad = 70
 
-
+	method cantaPresentacion (unaPresentacion) {
+	if( unaPresentacion.hayUnoSolo() )
+	     {  self.modificarHabilidad()
+	             }
+	else { return habilidad 
+	}
+	
+	}
         method modificarHabilidad() {
 		habilidad -= 20
 	 }
@@ -33,9 +49,9 @@ object lucia{
 		return unaCancion.contiene("familia")
 	}
 
-	method cantaEnGrupo(presentacion){
-		return presentacion.cantaEnGrupo(self)
-	}
+	//method cantaEnGrupo(presentacion){
+	//	return presentacion.cantaEnGrupo(self)
+	//}
 
 	method cobra(presentacion) {
 		if (presentacion.esConcurrida()){
@@ -44,12 +60,12 @@ object lucia{
 		else return 400
 	}
 
-	method habilidad(presentacion){
-		if (self.cantaEnGrupo(presentacion)){
-			return habilidad - 20
-		}
-		else return habilidad
-	}
+	//method habilidad(presentacion){
+	//	if (self.cantaEnGrupo(presentacion)){
+	//		return habilidad - 20
+	//	}
+	//	else return habilidad
+	//}
 }
 
 object luisAlberto{
