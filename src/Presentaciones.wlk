@@ -19,7 +19,10 @@ class Presentaciones {
 		
 	}
 	method cantaEngrupo (artistas) {
-	 return   artistas.size() >1
+	 if(artistas.size()>1)
+	   {
+	   	artistas.forEach(modificarHabilidad())
+	   }
 	}
 
 }
