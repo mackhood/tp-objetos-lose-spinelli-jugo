@@ -1,4 +1,4 @@
-class Presentaciones {
+class Presentacion {
 	
 	var capacidad
 	var fecha = new Date (dia,mes,anio)
