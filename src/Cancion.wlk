@@ -18,3 +18,5 @@ class Cancion {
 	
 
 }
+
+object cisne inherits Cancion(12,dfgdfgd)

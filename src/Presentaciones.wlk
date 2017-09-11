@@ -17,14 +17,14 @@ class Presentacion {
 	
 	method hastaSeptiembre(){
 	
-	return ((laFecha.mes = 09)and(laFecha.anio =2017))
+	return ((laFecha.mes == 09)and(laFecha.anio == 2017))
 		
 	}
 	
 	
 	method hayUnoSolo()
 	 {
-		return artistas.size () = 1
+		return artistas.size () == 1
      }
      
      

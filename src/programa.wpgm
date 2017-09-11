@@ -11,9 +11,9 @@ program x {
   const laFamilia = new Cancion (264,  "Quiero brindar por mi gente sencilla, por el amor brindo por la familia")
   const fechaLuna = new Date( 20,04,17)
   const fechaTrastienda = new Date (15,11,17)
-  const lunapark = new Presentacion(9290, fechaLuna,{luisAlberto,joaquin,lucia} }
+  const lunapark = new Presentacion(9290, fechaLuna,#{luisAlberto,joaquin,lucia} }
   
-  const laTrastienda = new Presentacion (700, fechaTrastienda , {luisAlberto,joaquin,lucia} }
+  const laTrastienda = new Presentacion (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} }
   
   }
  
