@@ -15,7 +15,17 @@ program x {
   object lunapark inherits Presentacion (9290, fechaLuna,#{luisAlberto,joaquin,lucia} )   {}
   
   
-  object laTrastienda inherits Presentacion  (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {}
+  object laTrastienda inherits Presentacion  (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {
+  method capadicad(){
+  if ( fechaTrastienda.dayOfweek == 6){
+
+  capacidad=700
+    }
+  else {
+  capacidad=300
+  }  }
+  
+  }
   
   }
  
