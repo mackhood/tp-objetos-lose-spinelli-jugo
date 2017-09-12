@@ -79,7 +79,7 @@ object luisAlberto{
 	}
 	
 	method cobra(presentacion){
-		if(presentacion.hastaSeptiembre()){
+		if(presentacion.antesQueFecha(presentacion.fecha(),(01,10,17)){
 			return 1000
 		}
 		else 	return 1200
