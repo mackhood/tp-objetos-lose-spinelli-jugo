@@ -8,15 +8,11 @@ object joaquin {
 	
 	method cantaPresentacion (unaPresentacion) {
 	if( unaPresentacion.hayUnoSolo() )
-	     {  self.modificarHabilidad()
-	             }
-	else { return habilidad 
-	}
-	}
+		{ return habilidad+5
+		}
+	else {  return habilidad
+	} }
 	
-	 method modificarHabilidad() {
-		habilidad += 5
-	 }
 	method interpretaBien(unaCancion){
 		return unaCancion.duraMasQue(300)
 		
@@ -35,16 +31,12 @@ object lucia{
 	var habilidad = 70
 
 	method cantaPresentacion (unaPresentacion) {
-	if( unaPresentacion.hayUnoSolo() )
-	     {  self.modificarHabilidad()
-	             }
-	else { return habilidad 
-	}
+		if( unaPresentacion.hayUnoSolo() )
+		{ return habilidad-20
+		}
+		else { return habilidad
+		} }
 	
-	}
-        method modificarHabilidad() {
-		habilidad -= 20
-	 }
 	method interpretaBien(unaCancion){
 		return unaCancion.contiene("familia")
 	}
