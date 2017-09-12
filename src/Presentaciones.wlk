@@ -17,8 +17,8 @@ class Presentacion {
 	
 	
 	
-	method fechaAntesQuePresentacion(unaFecha){
-	return unaFecha<=fecha
+	method antesQueFecha(fecha,unaFecha){
+	return fecha<=unaFecha
 	}
 	
 	
