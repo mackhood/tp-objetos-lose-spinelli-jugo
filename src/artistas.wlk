@@ -53,20 +53,18 @@ object lucia{
 	
 }
 
+
+object
+
+
 object luisAlberto{
 	var habilidad
 	var valorDeLaGuitarra
 	
 	method modificarHabilidad() {}
-	method usaLaFender(){
-		valorDeLaGuitarra = 10
-	}
 	
-	method usaLaGibson(estado){
-		if(estado == "rota"){
-			valorDeLaGuitarra = 5
-		}
-		else valorDeLaGuitarra = 15
+	method valorGuitarra(unaGuitarra) {
+	return unaGuitarra.valor()
 	}
 	
 	method calcularHabilidad(){
@@ -85,7 +83,38 @@ object luisAlberto{
 		else 	return 1200
 	}
 	
+	
+	object gibson {
+	var valor=10
+	var estadoRota=false
+	method estaRota (estadoRota){}
+	method valor(){
+	return valor}
 	}
+
+	object fender {
+	var valor=15
+	var estadoRota=false
+	
+	method estaRota (estadoRota) {
+	return estadoRota}
+	
+	method valor() {
+	if (estaRota(estadoRota)){
+	valor= 5
+	return valor}
+	else return valor}
+	
+	method romper (){
+	estadoRota=true
+	}
+	
+
+}
+	
+	
+	
+	
 
 
 	
