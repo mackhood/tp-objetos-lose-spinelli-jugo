@@ -4,16 +4,18 @@ impor class Date.*
 
 program x {
   
-  const cisne = new Cancion (312, "Hoy el viento 
+  object  cisne  inherits Cancion (312, "Hoy el viento 
   se abrio quedo vacio el aire una vez mas y el manantial broto y
-  nadie esta aqui y puedo ver que solo estallan las hojas al brillar")
+  nadie esta aqui y puedo ver que solo estallan las hojas al brillar")  {}
  
-  const laFamilia = new Cancion (264,  "Quiero brindar por mi gente sencilla, por el amor brindo por la familia")
-  const fechaLuna = new Date( 20,04,17)
-  const fechaTrastienda = new Date (15,11,17)
-  const lunapark = new Presentacion(9290, fechaLuna,#{luisAlberto,joaquin,lucia} }
+  object laFamilia  inherits Cancion  (264,  "Quiero brindar por mi gente sencilla, por el amor brindo por la familia")  {}
+  object fechaLuna  inherits Presentacion ( 20,04,17)   {}
   
-  const laTrastienda = new Presentacion (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} }
+  const fechaTrastienda = new Date (15,11,17)
+  object lunapark inherits Presentacion (9290, fechaLuna,#{luisAlberto,joaquin,lucia} )   {}
+  
+  
+  object laTrastienda inherits Presentacion  (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {}
   
   }
  
