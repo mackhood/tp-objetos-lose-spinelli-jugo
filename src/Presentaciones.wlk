@@ -3,7 +3,7 @@ class Presentacion {
 	var capacidad
 	var fecha = new Date (dia,mes,anio)
 	var artistas = #{}
-	var costo
+	
 	
 	constructor(laCapacidad, laFecha, losArtistas){
 		capacidad = laCapacidad
@@ -29,7 +29,7 @@ class Presentacion {
      
      
      method costoPresentacion () {
-     return artistas.fold(costo,{unArtista=> unArtista.cobra(self)})
+     return artistas.sum({unArtista=> unArtista.cobra(self)})
      
      }
 }
