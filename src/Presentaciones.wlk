@@ -15,11 +15,12 @@ class Presentacion {
 		return capacidad > 5000
 	}
 	
-	method hastaSeptiembre(){
 	
-	return ((laFecha.mes == 09)and(laFecha.anio == 2017))
-		
+	
+	method fechaAntesQuePresentacion(unaFecha){
+	return unaFecha<=fecha
 	}
+	
 	
 	
 	method hayUnoSolo()
