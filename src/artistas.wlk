@@ -78,10 +78,8 @@ object luisAlberto{
 	}
 	
 	method calcularHabilidad(){
-		if(8*valorDeLaGuitarra < 100){
-		return 8*valorDeLaGuitarra
-		}
-		else return 100
+	
+	return 100.min(8*valorDeLaGuitarra)
 		}
 	
 	method interpretaBien(unaCancion){
