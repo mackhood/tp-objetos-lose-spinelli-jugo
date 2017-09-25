@@ -1,9 +1,10 @@
 class Cancion {
-
+	var titulo
 	var duracion
 	var letra
 	
-	constructor(duracionDelTema, letraDelTema){
+	constructor(tituloDelTema, duracionDelTema, letraDelTema){
+		titulo = tituloDelTema
 		duracion = duracionDelTema
 		letra = letraDelTema
 	}
@@ -19,4 +20,3 @@ class Cancion {
 
 }
 
-object cisne inherits Cancion(12,dfgdfgd)
