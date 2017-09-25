@@ -4,11 +4,11 @@ import Presentaciones.*
 
 program x {
   
-  object  cisne  inherits Cancion (312, "Hoy el viento 
+  object  cisne  inherits Cancion (elViento,312, "Hoy el viento 
   se abrio quedo vacio el aire una vez mas y el manantial broto y
   nadie esta aqui y puedo ver que solo estallan las hojas al brillar")  {}
  
-  object laFamilia  inherits Cancion  (264,  "Quiero brindar por mi gente sencilla, por el amor brindo por la familia")  {}
+  object laFamilia  inherits Cancion  (laFamilia,264,  "Quiero brindar por mi gente sencilla, por el amor brindo por la familia")  {}
   object fechaLuna  inherits Presentacion ( 20,04,17)   {}
   
   const fechaTrastienda = new Date (15,11,17)
