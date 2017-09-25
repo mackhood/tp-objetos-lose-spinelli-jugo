@@ -19,4 +19,18 @@ class Cancion {
 	
 
 }
+ 
+class Album {
+var titulo
+var canciones= #{}
+var fecha
+var unidadesTotales
+var unidadesVendidas
 
+constructor (unTitulo,unasCanciones,unaFecha,un,ven) {
+titulo =unTitulo
+canciones = unasCanciones
+fecha = unaFecha
+unidadesTotales = un
+unidadesVendidas = ven
+}
