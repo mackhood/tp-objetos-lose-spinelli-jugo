@@ -21,6 +21,10 @@ class Cancion {
 		return duracion < 180
 	}
 	
+	method duracion(){
+		return duracion
+	}
+	
 
 }
  
