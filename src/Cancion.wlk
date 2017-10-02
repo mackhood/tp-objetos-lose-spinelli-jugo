@@ -51,4 +51,10 @@ method contienen(palabra){
   		return canciones.filter{cancion => cancion.contiene(palabra)}
   		
   		}
+		
+method duracionTotal(){
+	return canciones.sum{cancion => cancion.duracion()}
+	
+}
+
 }
