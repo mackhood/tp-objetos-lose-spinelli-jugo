@@ -38,3 +38,8 @@ fecha = unaFecha
 unidadesTotales = un
 unidadesVendidas = ven
 }
+
+method tieneCancionesCortas(){
+		return canciones.all({cancion => cancion.esCancionCorta()})
+	}
+}
