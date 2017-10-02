@@ -24,7 +24,10 @@ class Cancion {
 	method duracion(){
 		return duracion
 	}
-	
+
+	method letras(){
+		return letra.size()
+	}
 
 }
  
