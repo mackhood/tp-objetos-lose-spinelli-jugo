@@ -11,6 +11,10 @@ constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes){
 		albumes= unosAlbumes
 		
 	}
+
+method esMusicoMinimalista(){
+	return albumes.all({ album => album.tieneTodasCancionesCortas()})	
+	}
 }
 class MusicoDeGrupo inherits Musico {
 
