@@ -17,6 +17,10 @@ class Cancion {
 		return letra.contains(unaPalabra)
 	}
 	
+	method esCancionCorta(){
+		return duracion < 180
+	}
+	
 
 }
  
