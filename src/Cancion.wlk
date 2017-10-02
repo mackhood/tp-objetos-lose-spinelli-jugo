@@ -64,4 +64,8 @@ method laCancionMasLarga(){
 		return canciones.max{ cancion => cancion.letras()}
 	}
 
+method seVendioEl75x100toOMas(){
+		return unidadesVendidas/unidadesTotales >= 0.75
+	}
+
 }
