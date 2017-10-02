@@ -47,7 +47,7 @@ unidadesVendidas = ven
 }
 
 method tieneTodasCancionesCortas(){
-		return canciones.all({cancion => cancion.esCancionCorta()})
+		return canciones.all{cancion => cancion.esCancionCorta()}
 	}
 	
 method contienen(palabra){
@@ -59,5 +59,9 @@ method duracionTotal(){
 	return canciones.sum{cancion => cancion.duracion()}
 	
 }
+
+method laCancionMasLarga(){
+		return canciones.max{ cancion => cancion.letras()}
+	}
 
 }
