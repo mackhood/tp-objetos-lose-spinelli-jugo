@@ -39,7 +39,7 @@ unidadesTotales = un
 unidadesVendidas = ven
 }
 
-method tieneCancionesCortas(){
+method tieneTodasCancionesCortas(){
 		return canciones.all({cancion => cancion.esCancionCorta()})
 	}
 }
