@@ -19,6 +19,11 @@ method esMusicoMinimalista(){
 method cancionesQueContienenLaPalabra(palabra){
   		return albumes.map({ album => album.contienen(palabra) })
  }
+
+method duracionDeSuObra(){
+		return albumes.sum({album => album.duracionTotal()})
+	}
+	
 	
 
 }
