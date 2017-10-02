@@ -23,8 +23,11 @@ method cancionesQueContienenLaPalabra(palabra){
 method duracionDeSuObra(){
 		return albumes.sum({album => album.duracionTotal()})
 	}
-	
-	
+
+method laPego(){
+		return albumes.all({album => album.seVendioEl175x100toOMas()})
+
+}
 
 }
 class MusicoDeGrupo inherits Musico {
