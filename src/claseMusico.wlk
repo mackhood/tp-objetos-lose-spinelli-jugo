@@ -15,6 +15,12 @@ constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes){
 method esMusicoMinimalista(){
 	return albumes.all({ album => album.tieneTodasCancionesCortas()})	
 	}
+
+method cancionesQueContienenLaPalabra(palabra){
+  		return albumes.map({ album => album.contienen(palabra) })
+ }
+	
+
 }
 class MusicoDeGrupo inherits Musico {
 
