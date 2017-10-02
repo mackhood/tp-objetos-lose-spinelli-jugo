@@ -1,28 +1,26 @@
-class MusicoDeGRupo {
+import Cancion.*
 
-var album = #{}
-var tocaEnGrupo 
-var habilidad
-constructor(unAlbum, stocaEnGrupo, shabiliad) {
-album = unAlbum
-tocaEnGrupo=stocaEnGrupo
-habiliad=shabiliad
+class Musico {
+	var albumes = #{}
+	var tocaEnGrupo 
+	var habilidad
+
+constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes){
+		tocaEnGrupo = sTocaEnGrupo
+		habilidad = unaHabilidad
+		albumes= unosAlbumes
+		
+	}
 }
+class MusicoDeGrupo inherits Musico {
+
 
 method modificarHabilidad(cantidad){
-hablidad+=cantidad
+habilidad += cantidad
 }
 
 }
 
-class MusicoVocalista {
+class MusicoVocalista inherits Musico {
 
-var album = #{}
-var tocaEnGrupo 
-var habilidad
-constructor(unAlbum, stocaEnGrupo, shabiliad) {
-album = unAlbum
-tocaEnGrupo=stocaEnGrupo
-habiliad=shabiliad
 }
-
