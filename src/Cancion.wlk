@@ -42,4 +42,9 @@ unidadesVendidas = ven
 method tieneTodasCancionesCortas(){
 		return canciones.all({cancion => cancion.esCancionCorta()})
 	}
+	
+method contienen(palabra){
+  		return canciones.filter{cancion => cancion.contiene(palabra)}
+  		
+  		}
 }
