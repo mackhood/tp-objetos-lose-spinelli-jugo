@@ -1,9 +1,9 @@
 import Cancion.*
 import Presentaciones.*
 import claseMusico.*
-object joaquin {
+object joaquin inherits Musico (true, 20, #{}) {
 	var grupo = "Pimpinela"
-	var habilidad = 20
+	
 	
 	
 	method cantaPresentacion (unaPresentacion) {
@@ -26,10 +26,9 @@ object joaquin {
 	}
 }
 
-object lucia{
+object lucia inherits (true, 70, #{}){
 	var grupo = "Pimpinela"
-	var habilidad = 70
-
+	
 	method cantaPresentacion (unaPresentacion) {
 		if( unaPresentacion.hayUnoSolo() )
 		{ return habilidad-20
