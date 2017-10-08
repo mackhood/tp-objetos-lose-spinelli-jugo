@@ -31,9 +31,12 @@ method laPego(){
 
 }
 class MusicoDeGrupo inherits Musico {
+var habilidadDeGrupo
+constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,unaHabilidadDeGrupo) =  super(sTocaEnGrupo, unaHabilidad, unosAlbumes) {
+habilidadDeGrupo = unaHabilidadDeGrupo
+ 
 
-
-method modificarHabilidad(cantidad){
+method modificarHabilidad(habilidadDeGrupo){
 habilidad += cantidad
 }
 
