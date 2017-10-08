@@ -29,6 +29,12 @@ method laPego(){
 
 }
 
+
+method agregarAlbum (unAlbum) {
+
+albumes.add(unAlbum)
+}
+
 }
 class MusicoDeGrupo inherits Musico {
 var habilidadDeGrupo
