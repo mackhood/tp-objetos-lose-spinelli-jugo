@@ -22,3 +22,9 @@ test "joaquin la pego" {
 assert.that(joaquin.laPego()) }
 
 }
+
+describe "Tests KiKe" { 
+test "cuanto dura obra" {
+assert.equals(0,kike.duracionDeSuObra())
+}
+
