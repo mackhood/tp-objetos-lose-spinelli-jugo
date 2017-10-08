@@ -40,5 +40,10 @@ habilidad += cantidad
 }
 
 class MusicoVocalista inherits Musico {
+var palabraCantaBien
+
+method interpretaBien(unaCancion){
+	return unaCancion.contiene(palabraCantaBien)
+	}
 
 }
