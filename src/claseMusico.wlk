@@ -42,6 +42,12 @@ habilidad += cantidad
 class MusicoVocalista inherits Musico {
 var palabraCantaBien
 
+  constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,laPalabra) = super(sTocaEnGrupo, unaHabilidad, unosAlbumes) {
+        palabraCantaBien = laPalabra
+    }
+
+
+
 method interpretaBien(unaCancion){
 	return unaCancion.contiene(palabraCantaBien)
 	}
