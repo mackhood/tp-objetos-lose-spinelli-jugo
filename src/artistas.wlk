@@ -1,6 +1,6 @@
 import Cancion.*
 import Presentaciones.*
-
+import claseMusico.*
 object joaquin {
 	var grupo = "Pimpinela"
 	var habilidad = 20
@@ -106,6 +106,18 @@ object luisAlberto{
 	
 
 }
+
+
+object kike inherits MusicoDeGrupo (true,60,#{},20) {
+
+}
+
+object soledad inherits MusicoVocalista (false,55,#{},"amor") {
+}
+
+
+
+
 	
 	
 	
