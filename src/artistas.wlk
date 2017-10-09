@@ -1,18 +1,17 @@
 import Cancion.*
 import Presentaciones.*
 import claseMusico.*
-object joaquin inherits Musico (true, 20, #{}) {
+object joaquin inherits MusicoDeGrupo (true, 20, #{},5) {
 	var grupo = "Pimpinela"
 	
 	
 	
-	method cantaPresentacion (unaPresentacion) {
+/*	method cantaPresentacion (unaPresentacion) {
 	if( unaPresentacion.hayUnoSolo() )
-		{
-			return habilidad + 5
+		{ return habilidad+5
 		}
 	else {  return habilidad
-	} }
+	} }    (NO SE REEMPLAZARIA CON LA HABILIDAD DE MUSICO DE GRUPO?)  */
 	
 	method interpretaBien(unaCancion){
 		return unaCancion.duraMasQue(300)
@@ -27,7 +26,7 @@ object joaquin inherits Musico (true, 20, #{}) {
 	}
 }
 
-object lucia inherits (true, 70, #{}){
+object lucia inherits MusicoVocalista  (true, 70, #{},"familia"){
 	var grupo = "Pimpinela"
 	
 	method cantaPresentacion (unaPresentacion) {
@@ -37,10 +36,7 @@ object lucia inherits (true, 70, #{}){
 		else { return habilidad
 		} }
 	
-	method interpretaBien(unaCancion){
-		return unaCancion.contiene("familia")
-	}
-
+	
 	
 
 	method cobra(presentacion) {
@@ -53,8 +49,8 @@ object lucia inherits (true, 70, #{}){
 	
 }
 
-object luisAlberto{
-	var habilidad
+object luisAlberto inherits Musico (true,0,#{}) {
+	
 	var valorDeLaGuitarra
 	
 	method modificarHabilidad() {}
