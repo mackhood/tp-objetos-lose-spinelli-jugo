@@ -75,7 +75,7 @@ object luisAlberto inherits Musico (true,0,#{}) {
 			}
 	
 	
-	object gibson {
+	object fender {
 	var valor=10
 	var estadoRota=false
 	method estaRota (estadoRota){}
@@ -83,7 +83,7 @@ object luisAlberto inherits Musico (true,0,#{}) {
 	return valor}
 	}
 
-	object fender {
+	object gibson {
 	var valor=15
 	var estadoRota=false
 	
