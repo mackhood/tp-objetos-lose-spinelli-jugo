@@ -42,4 +42,33 @@ describe "Tests de los artistas"
     luisAlberto.valorGuitarra(gibson)
     assert.equal(40, luisAlberto.calcularHabilidad())
   }
-    
+  
+  test "saber si joaquin interpreta bien ´La Familia´"
+  {
+    assert.equal(false, joaquin.interpretaBien(laFamilia))
+  }
+  
+  test "saber si joaquin interpreta bien ´ElCisne´"
+  {
+    assert.equal(true, joaquin.interpretaBien(cisne))
+  }
+  
+  test "saber si lucia interpreta bien ´La Familia´"
+  {
+    assert.equal(true, lucia.interpretaBien(laFamilia))
+  }
+  
+  test "saber si lucia interpreta bien ´El Cisne´"
+  {
+    assert.equal(false, lucia.interpretaBien(cisne))
+  }
+  
+  test "saber si luis alberto interpreta bien ´La Familia´"
+  {
+    assert.equal(true, luisAlberto.interpretaBien(laFamilia))
+  }
+  
+  test "saber si luis alberto interpreta bien ´El Cisne´"
+  {
+    assert.equal(false, luisAlberto.interpretaBien(cisne))
+  }
