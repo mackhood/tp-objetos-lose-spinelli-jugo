@@ -2,12 +2,19 @@ import artistas.*
 
 describe "Tests de los artistas"
 {
-  test "conocer la habilidad de Joaquín, que canta en el grupo Pimpinella"
+  test "conocer la habilidad de Joaquín, que canta en el grupo Pimpinela"
   {
     assert.equal(25, joaquin.habilidad())
   }
   
-  test "ver habilidad de Joaquín ahora que no está en Pimpinella"
+  test "ver habilidad de Joaquín ahora que no está en Pimpinela"
   {
-    assert
+    joaquin.abandonarGrupo()
+    assert.equal(20, joaquin.habilidad())
+  }
+  
+  test "conocer la habilidad de Lucia, quien está en Pimpinella"
+  {
+    assert.equal(50, lucia.habilidad())
+  }
   
