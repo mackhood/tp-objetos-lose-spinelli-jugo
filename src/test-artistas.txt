@@ -18,3 +18,28 @@ describe "Tests de los artistas"
     assert.equal(50, lucia.habilidad())
   }
   
+  test "ver habilidad de lucia ahora que no está en Pimpinela"
+  {
+    lucia.abandonarGrupo()
+    assert.equal(70, lucia.habilidad())
+  }
+  
+  test "ver la habilidad de Luis Alberto cuando toca la Fender"
+  {
+    luisAlberto.valorGuitarra(fender)
+    assert.equal(80, luisAlberto.calcularHablidad())
+  }
+  
+  test "ahora Luis toca con la Gibson sana"
+  {
+    luisAlberto.valorGuitarra(gibson)
+    assert.equal(100, luisAlberto.calcularHabilidad())
+  }
+  
+  test "alguien rompe la gibson y tiene que tocar"
+  {
+    gibson.romper()
+    luisAlberto.valorGuitarra(gibson)
+    assert.equal(40, luisAlberto.calcularHabilidad())
+  }
+    
