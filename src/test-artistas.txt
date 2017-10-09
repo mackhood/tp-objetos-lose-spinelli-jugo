@@ -120,3 +120,14 @@ describe "Tests de los artistas"
   {
     assert.equal(1200, luisAlberto.cobra(laTrastienda))
   }
+  
+  test "calcular el costo total de la presentación del luna park"
+  {
+    assert.equal(1550, lunapark.costoPresentacion())
+  }
+  
+  test "calcular el costo total de la presentación de la trastienda el 15/11/17"
+  {
+    const fechaTrastienda = new Date (15,11,17)
+    assert.equal(1650, laTrastienda.costoPresentacion())
+  }
