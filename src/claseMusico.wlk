@@ -11,7 +11,10 @@ constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes){
 		albumes= unosAlbumes
 		
 	}
-
+method abandonarGrupo()
+{
+	tocaEnGrupo = false
+}
 method habilidad()
 {
 	return habilidad
