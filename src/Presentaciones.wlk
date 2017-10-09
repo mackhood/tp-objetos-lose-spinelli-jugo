@@ -1,3 +1,5 @@
+import artistas.*
+
 class Presentacion {
 	
 	var capacidad
@@ -15,7 +17,11 @@ class Presentacion {
 		return capacidad > 5000
 	}
 	
-	
+	method tomarElEscenario(unArtista)
+	{
+		artistas.clear()
+		artistas = #{unArtista}
+	}
 	
 	method antesQueFecha(fecha,unaFecha){
 	return fecha<=unaFecha
