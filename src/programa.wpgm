@@ -16,7 +16,7 @@ program x {
   
   
   object laTrastienda inherits Presentacion  (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {
-  method capadicad(){
+  method capacidad(){
   if ( fechaTrastienda.dayOfweek == 6){
 
   capacidad=700
