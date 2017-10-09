@@ -12,6 +12,11 @@ constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes){
 		
 	}
 
+method habilidad()
+{
+	return habilidad
+}
+
 method esMusicoMinimalista(){
 	return albumes.all({ album => album.tieneTodasCancionesCortas()})	
 	}
