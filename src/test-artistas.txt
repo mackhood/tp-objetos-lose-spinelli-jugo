@@ -1,0 +1,13 @@
+import artistas.*
+
+describe "Tests de los artistas"
+{
+  test "conocer la habilidad de Joaquín, que canta en el grupo Pimpinella"
+  {
+    assert.equal(25, joaquin.habilidad())
+  }
+  
+  test "ver habilidad de Joaquín ahora que no está en Pimpinella"
+  {
+    assert
+  
