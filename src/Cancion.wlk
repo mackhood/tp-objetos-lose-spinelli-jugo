@@ -44,7 +44,9 @@ class Cancion {
 	return duracion()
 	}
 	
-	
+	method letra () {
+	return letra 
+	}
 	
 	
 	method remix () = new Cancion(duracion*3 ,"mueve tu cuelpo baby "+ letra +" yeah oh yeah",titulo,autor)
@@ -53,10 +55,10 @@ class Cancion {
 	
 	method mashup (listaDeCanciones) {
 	
-	var tituloMashup = listaDeCanciones.map({unaCancion => unaCancion.letra()}).fold("",{acumulador,unaCancion => unaCancion +" " acumulador})
+	var tituloMashup = listaDeCanciones.map({unaCancion => unaCancion.letra()}).fold("",{letraAcumulada,unaCancion => unaCancion +" " letraAcumulada})
 	
-	
-
+	var duracionMashup = listaDeCanciones.map({unaCancion => unaCancion.duracion()}).max()
+	return new Cancion(tituloMashup,duracionMashup,tituloMashup) }
 }
  
 class Album {
