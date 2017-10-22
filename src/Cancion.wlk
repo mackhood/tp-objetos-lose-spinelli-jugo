@@ -29,21 +29,20 @@ class Cancion {
 		return letra.size()
 	}
 	
-	
 	method comparar( otraCancion) {
-	return self.criterio() > otraCancion.criterio()  }
-	
-	method criterioPorTitulo () {
-	return titulo.size() }
-	
-	method criterioLetra () {
-	return letra.size()
-	}
-	
-	method criterioPorDuracion () {
-	return duracion()
-	}
-	
+ 	return self.criterio() > otraCancion.criterio()  }
+ 	
+ 	method criterioPorTitulo () {
+ 	return titulo.size() }
+ 	
+ 	method criterioLetra () {
+ 	return letra.size()
+  	}
+ 	
+ 	method criterioPorDuracion () {
+ 	return duracion()
+ 
+ 	}
 
 }
  
