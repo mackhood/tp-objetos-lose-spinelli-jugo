@@ -29,20 +29,33 @@ class Cancion {
 		return letra.size()
 	}
 	
+	
 	method comparar( otraCancion) {
- 	return self.criterio() > otraCancion.criterio()  }
- 	
- 	method criterioPorTitulo () {
- 	return titulo.size() }
- 	
- 	method criterioLetra () {
- 	return letra.size()
-  	}
- 	
- 	method criterioPorDuracion () {
- 	return duracion()
- 
- 	}
+	return self.criterio() > otraCancion.criterio()  }
+	
+	method criterioPorTitulo () {
+	return titulo.size() }
+	
+	method criterioLetra () {
+	return letra.size()
+	}
+	
+	method criterioPorDuracion () {
+	return duracion()
+	}
+	
+	
+	
+	
+	method remix () = new Cancion(duracion*3 ,"mueve tu cuelpo baby "+ letra +" yeah oh yeah",titulo,autor)
+	
+	
+	
+	method mashup (listaDeCanciones) {
+	
+	var tituloMashup = listaDeCanciones.map({unaCancion => unaCancion.letra()}).fold("",{acumulador,unaCancion => unaCancion +" " acumulador})
+	
+	
 
 }
  
@@ -84,4 +97,5 @@ method seVendioEl75x100toOMas(){
 	}
 
 }
- 
+
+
