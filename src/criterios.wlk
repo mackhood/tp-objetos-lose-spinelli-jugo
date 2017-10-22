@@ -1,8 +1,8 @@
 import Cancion.*
 
-object criterioPorTitulo {
+object criterioPorLetra {
 		method comparar(unaCancion, otraCancion){
-			if(unaCancion.size() > otraCancion.size()){
+			if(unaCancion.tamanioDeLetra() > otraCancion.tamanioDeLetra()){
 				return unaCancion
 			}
 			else{
@@ -10,4 +10,3 @@ object criterioPorTitulo {
 			}
 		}
 	}
-
