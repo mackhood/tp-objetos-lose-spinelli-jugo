@@ -34,6 +34,15 @@ method duracionDeSuObra(){
 
 method laPego(){
 		return albumes.all({album => album.seVendioEl175x100toOMas()})
+		
+		
+method interpretaBien(unaCancion){
+	var valor
+	if ( (unaCancion.autor == musico) or (habilidad>60){
+	valor= true 
+	
+	}
+	else{ valor= false  }
 
 }
 
@@ -44,6 +53,7 @@ albumes.add(unAlbum)
 }
 
 }
+
 class MusicoDeGrupo inherits Musico {
 var habilidadDeGrupo
 constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,unaHabilidadDeGrupo) =  super(sTocaEnGrupo, unaHabilidad, unosAlbumes) {
@@ -52,6 +62,17 @@ habilidadDeGrupo = unaHabilidadDeGrupo
 
 method modificarHabilidad(cantidad){
 habilidad += cantidad
+}
+
+
+
+	
+
+override method interpretaBien(unaCancion) {
+super(unaCancion)
+valor = unaCancion.duraMasQue(300)
+return valor
+
 }
 
 }
@@ -65,8 +86,11 @@ var palabraCantaBien
 
 
 
-method interpretaBien(unaCancion){
-	return unaCancion.contiene(palabraCantaBien)
+override method interpretaBien(unaCancion){
+	
+	super(unaCancion)
+	valor= unaCancion.contiene(palabraCantaBien) 
+	return valor	}
 	}
 
 }
