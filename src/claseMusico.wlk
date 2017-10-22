@@ -4,12 +4,13 @@ class Musico {
 	var albumes = #{}
 	var tocaEnGrupo 
 	var habilidad
+	var cancionesPropias = #{}
 
-constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes){
+constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria){
 		tocaEnGrupo = sTocaEnGrupo
 		habilidad = unaHabilidad
 		albumes= unosAlbumes
-		
+		cancionesPropias = cancionesDeAutoria
 	}
 method abandonarGrupo()
 {
