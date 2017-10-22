@@ -1,6 +1,6 @@
 import Cancion.*
 import Presentaciones.*
-
+import Estadio.*
 
 program x {
   
@@ -12,6 +12,21 @@ program x {
   país no estuvo hecho porque sí. Te vas a ir, vas a salir pero te quedas, 
   ¿dónde más vas a ir? Y es que aquí, sabes el trabalenguas, trabalenguas, 
   el asesino te asesina, y es mucho para ti. Se acabó ese juego que te hacía feliz.", luisAlberto) {}
+  
+  object lunaPark inherits Estadio ("Luna Park", 9260) {}
+  
+  object laTrastienda inherits Estadio ("La Trastienda", 700)
+  {
+     override method capacidad(unaPresentación)
+     {
+      if ( unaPresentación.fechaDePresentación().dayOfweek == 6){
+         return 700
+      }
+      else {
+         return 300
+      }  
+     }
+  }
  
   object laFamilia  inherits Cancion  (laFamilia,264,  "Quiero brindar por mi gente sencilla, por el amor 
   brindo por la familia", lucia)  {}
@@ -19,20 +34,42 @@ program x {
   const fechaLuna = new Date( 20,04,17)   {}
   
   const fechaTrastienda = new Date (15,11,17)
-  object lunapark inherits Presentacion (9290, fechaLuna,#{luisAlberto,joaquin,lucia} )   {}
+  object presentandoEnLuna inherits Presentacion (lunaPark, fechaLuna,#{luisAlberto,joaquin,lucia} )   {}
   
+  const fechapDePalooza = new Date (15,12,17)
   
-  object laTrastienda inherits Presentacion  (700, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {
-  method capacidad(){
-  if ( fechaTrastienda.dayOfweek == 6){
-
-  capacidad=700
+  object pDePaloozaEnLuna inherits Presentacion (lunaPark, fechapDePalooza, #{})
+  {
+    method agregarMusico (unMusico)
+    {
+       if (puedeAgregar(unMusico))
+       {
+          artistas.add(unMusico)
+       }
+       else
+       {
+          return 
+       }
     }
-  else {
-  capacidad=300
-  }  }
-  
+    
+    method puedeAgregar (unMusico)
+    {
+        return (tieneLaHabilidad(unMusico) && tieneCancionesPropias(unMusico))
+    }
+    
+    method tieneCancionesPropias(unMusico)
+    {
+        return unMusico.cancionesPropias.size() >= 1
+    }
+    
+    method tieneLaHabilidad(unMusico)
+    {
+        return unMusico.habilidad > 70
+    }
+    
   }
+  
+  object presentandoEnTrastienda inherits Presentacion  (laTrastienda, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {}
   
   }
  
