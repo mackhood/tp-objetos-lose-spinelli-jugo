@@ -3,7 +3,7 @@ import artistas.*
 class Presentacion {
 	
 	var capacidad
-	var fecha = new Date (dia,mes,anio)
+	var fecha = new Date()
 	var artistas = #{}
 	
 	
@@ -23,8 +23,8 @@ class Presentacion {
 		artistas = #{unArtista}
 	}
 	
-	method antesQueFecha(fecha,unaFecha){
-	return fecha<=unaFecha
+	method antesQueFecha(otraFecha,unaFecha){
+	return otraFecha<=unaFecha
 	}
 	
 	
