@@ -8,7 +8,7 @@ program x {
   se abrio quedo vacio el aire una vez mas y el manantial broto y
   nadie esta aqui y puedo ver que solo estallan las hojas al brillar", joaquin)  {}
   
-  object  canciónDeAliciaEnElPaís  inherits Cancion (elViento, 510, "Quién sabe Alicia, este 
+  object  aliciaEnElPaís  inherits Cancion (elViento, 510, "Quién sabe Alicia, este 
   país no estuvo hecho porque sí. Te vas a ir, vas a salir pero te quedas, 
   ¿dónde más vas a ir? Y es que aquí, sabes el trabalenguas, trabalenguas, 
   el asesino te asesina, y es mucho para ti. Se acabó ese juego que te hacía feliz.", luisAlberto) {}
@@ -54,7 +54,7 @@ program x {
     
     method puedeAgregar (unMusico)
     {
-        return (tieneLaHabilidad(unMusico) && tieneCancionesPropias(unMusico))
+        return (tieneLaHabilidad(unMusico) and tieneCancionesPropias(unMusico)) and puedeInterpretarAlicia(unMusico)
     }
     
     method tieneCancionesPropias(unMusico)
@@ -65,6 +65,10 @@ program x {
     method tieneLaHabilidad(unMusico)
     {
         return unMusico.habilidad > 70
+    }
+    method puedeInterpretarAlicia(unMusico)
+    {
+        return unMusico.interpretaBien(aliciaEnElPaís)
     }
     
   }
