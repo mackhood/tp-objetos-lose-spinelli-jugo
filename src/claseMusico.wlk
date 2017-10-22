@@ -35,53 +35,39 @@ method duracionDeSuObra(){
 
 method laPego(){
 		return albumes.all({album => album.seVendioEl175x100toOMas()})
-		
-		
+		}
+				
 method interpretaBien(unaCancion){
-	var valor
-	if ( (unaCancion.autor == musico) or (habilidad>60){
-	valor= true 
-	
+	return ((unaCancion.autor() == self) || (habilidad>60))
 	}
-	else{ valor= false  }
-
-}
-
 
 method agregarAlbum (unAlbum) {
-
 albumes.add(unAlbum)
-}
+}	
 
 }
 
 class MusicoDeGrupo inherits Musico {
 var habilidadDeGrupo
-constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,unaHabilidadDeGrupo) =  super(sTocaEnGrupo, unaHabilidad, unosAlbumes) {
+constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,unaHabilidadDeGrupo, cancionesDeAutoria) =  super(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria) {
 habilidadDeGrupo = unaHabilidadDeGrupo
  }
 
 method modificarHabilidad(cantidad){
 habilidad += cantidad
 }
-
-
-
 	
 
 override method interpretaBien(unaCancion) {
 super(unaCancion)
-valor = unaCancion.duraMasQue(300)
-return valor
-
-}
-
+return unaCancion.duraMasQue(300)
+	}
 }
 
 class MusicoVocalista inherits Musico {
 var palabraCantaBien
 
-  constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,laPalabra) = super(sTocaEnGrupo, unaHabilidad, unosAlbumes) {
+  constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,laPalabra, cancionesDeAutoria) = super(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria) {
         palabraCantaBien = laPalabra
     }
 
@@ -90,8 +76,6 @@ var palabraCantaBien
 override method interpretaBien(unaCancion){
 	
 	super(unaCancion)
-	valor= unaCancion.contiene(palabraCantaBien) 
-	return valor	}
+	return unaCancion.contiene(palabraCantaBien) 
 	}
-
 }
