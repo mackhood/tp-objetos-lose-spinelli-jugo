@@ -2,11 +2,13 @@ class Cancion {
 	var titulo
 	var duracion
 	var letra
+	var autor
 	
-	constructor(tituloDelTema, duracionDelTema, letraDelTema){
+	constructor(tituloDelTema, duracionDelTema, letraDelTema, autorDelTema){
 		titulo = tituloDelTema
 		duracion = duracionDelTema
 		letra = letraDelTema
+		autor = autorDelTema
 	}
 
 	method duraMasQue(duracionDelTema){
@@ -58,7 +60,7 @@ class Cancion {
 	var tituloMashup = listaDeCanciones.map({unaCancion => unaCancion.letra()}).fold("",{letraAcumulada,unaCancion => unaCancion +" " letraAcumulada})
 	
 	var duracionMashup = listaDeCanciones.map({unaCancion => unaCancion.duracion()}).max()
-	return new Cancion(tituloMashup,duracionMashup,tituloMashup) }
+	return new Cancion(tituloMashup,duracionMashup,tituloMashup,autor) }
 }
  
 class Album {
