@@ -68,30 +68,40 @@ object luisAlberto inherits Musico (true,0,#{}) {
 		return true
 	}
 	
-	method cobra(presentacion){
-		if (presentacion.antesQueFecha(presentacion.fecha(),(01,10,17))){
-			return 1000}
-			else { return 1200}
-			}
+	method cobra(presentacion){	
+		if (presentacion.antesQueFecha(presentacion.fecha(), new Date (01,10,17))){
+			return 1000
+		}else{ 
+			return 1200
+		}
+	}
+
+}
 	
 	
 	object fender {
 	var valor=10
-	var estadoRota=false
-	method estaRota (estadoRota){}
-	method valor(){
-	return valor}
+	var estadoRota = false
+	
+	method estaRota (){
+		return estadoRota}
+	
+	method valor()
+	{
+	return valor
+	}
+	
 	}
 
 	object gibson {
 	var valor=15
 	var estadoRota=false
 	
-	method estaRota (estadoRota) {
+	method estaRota () {
 	return estadoRota}
 	
 	method valor() {
-	if (estaRota(estadoRota)){
+	if (self.estaRota()){
 	valor= 5
 	return valor}
 	else return valor}
@@ -110,18 +120,3 @@ object kike inherits MusicoDeGrupo (true,60,#{},20) {
 
 object soledad inherits MusicoVocalista (false,55,#{},"amor") {
 }
-
-
-
-
-	
-	
-	
-	
-
-	
-	
-	
-
-
-	
