@@ -5,10 +5,11 @@ class Presentacion {
 	var capacidad
 	var fecha = new Date()
 	var artistas = #{}
+	var estadio
 	
-	
-	constructor(laCapacidad, laFecha, losArtistas){
-		capacidad = laCapacidad
+	constructor(unEstadio, laFecha, losArtistas){
+		estadio= unEstadio
+		capacidad = unEstadio.capacidad()
 		fecha  = laFecha
 		artistas = losArtistas
 	}
