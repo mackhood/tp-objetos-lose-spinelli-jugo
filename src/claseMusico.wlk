@@ -89,4 +89,9 @@ return canción.tieneLaPalabra(unaPalabra)
 }
 
 
+class Largueros inherits Musico {
 
+method interpretaBien(unaCancion,segundos) {
+return unaCancion.duraMasQue(segundos) 
+}
+}
