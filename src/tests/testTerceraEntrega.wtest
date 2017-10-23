@@ -1,10 +1,9 @@
 import claseMusico.*
 import Cancion.*
 import claseEstadio.*
-import programa.*
 import Presentaciones.*
 import artistas.*
-import LaTrastienda.*
+import criterios.*
 
 describe "Tests de la entrega 3"{ 
 

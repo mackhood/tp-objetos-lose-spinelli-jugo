@@ -43,6 +43,10 @@ class Presentacion {
      return artistas.sum({unArtista=> unArtista.cobra(self)})
      
      }
+     method capacidad() {
+     return capacidad
+     }
+     
 }
 
  const fechaLuna = new Date( 20,04,17)   {}

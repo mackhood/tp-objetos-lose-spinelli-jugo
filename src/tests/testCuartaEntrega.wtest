@@ -3,6 +3,8 @@ import Cancion.*
 import claseMusico.*
 import Presentaciones.*
 import claseEstadio.*
+import maneraDeCobrar.*
+import criterios.*
 
 describe "Tests de la entrega 4"{ 
 

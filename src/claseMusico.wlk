@@ -47,14 +47,13 @@ albumes.add(unAlbum)
 }	
 
 
-method cobro(){
-
-return metodoCobro.cobrar()
+method costoPresentacion(unaPresentacion){
+		return metodoCobro.costoDeUnaPresentacion(unaPresentacion)
 }
 
 method cambiarMetodoCobrar (otroMetodoCobro) {
 
-metodoCobro=otroMetodoCobro
+metodoCobro = otroMetodoCobro
 }
 
 
