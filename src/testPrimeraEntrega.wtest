@@ -16,13 +16,13 @@ describe "Tests de los artistas" {
     assert.equals(25, joaquin.habilidad())
   }
   
-  test "ver habilidad de JoaquÃ­n ahora que no estÃ¡ en Pimpinela"
+  test "ver habilidad de Joaquin ahora que no esta en Pimpinela"
   {
     joaquin.abandonarGrupo()
     assert.equals(20, joaquin.habilidad())
   }
   
-  test "conocer la habilidad de Lucia, quien estÃ¡ en Pimpinella"
+  test "conocer la habilidad de Lucia, quien esta en Pimpinella"
   {
     assert.equals(50, lucia.habilidad())
   }

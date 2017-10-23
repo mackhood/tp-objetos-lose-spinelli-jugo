@@ -4,76 +4,8 @@ import Estadio.*
 
 program x {
   
-  object  cisne  inherits Cancion (elViento,312, "Hoy el viento 
-  se abrio quedo vacio el aire una vez mas y el manantial broto y
-  nadie esta aqui y puedo ver que solo estallan las hojas al brillar", joaquin)  {}
-  
-  object  aliciaEnElPaís  inherits Cancion (elViento, 510, "Quién sabe Alicia, este 
-  país no estuvo hecho porque sí. Te vas a ir, vas a salir pero te quedas, 
-  ¿dónde más vas a ir? Y es que aquí, sabes el trabalenguas, trabalenguas, 
-  el asesino te asesina, y es mucho para ti. Se acabó ese juego que te hacía feliz.", luisAlberto) {}
-  
-  object lunaPark inherits Estadio ("Luna Park", 9260) {}
-  
-  object laTrastienda inherits Estadio ("La Trastienda", 700)
-  {
-     override method capacidad(unaPresentación)
-     {
-      if ( unaPresentación.fechaDePresentación().dayOfweek == 6){
-         return 700
-      }
-      else {
-         return 300
-      }  
-     }
-  }
+
+
  
-  object laFamilia  inherits Cancion  (laFamilia,264,  "Quiero brindar por mi gente sencilla, por el amor 
-  brindo por la familia", lucia)  {}
-  
-  const fechaLuna = new Date( 20,04,17)   {}
-  
-  const fechaTrastienda = new Date (15,11,17)
-  object presentandoEnLuna inherits Presentacion (lunaPark, fechaLuna,#{luisAlberto,joaquin,lucia} )   {}
-  
-  const fechapDePalooza = new Date (15,12,17)
-  
-  object pDePaloozaEnLuna inherits Presentacion (lunaPark, fechapDePalooza, #{})
-  {
-    method agregarMusico (unMusico)
-    {
-       if (puedeAgregar(unMusico))
-       {
-          artistas.add(unMusico)
-       }
-       else
-       {
-          return 
-       }
-    }
-    
-    method puedeAgregar (unMusico)
-    {
-        return (tieneLaHabilidad(unMusico) and tieneCancionesPropias(unMusico)) and puedeInterpretarAlicia(unMusico)
-    }
-    
-    method tieneCancionesPropias(unMusico)
-    {
-        return unMusico.cancionesPropias.size() >= 1
-    }
-    
-    method tieneLaHabilidad(unMusico)
-    {
-        return unMusico.habilidad > 70
-    }
-    method puedeInterpretarAlicia(unMusico)
-    {
-        return unMusico.interpretaBien(aliciaEnElPaís)
-    }
-    
-  }
-  
-  object presentandoEnTrastienda inherits Presentacion  (laTrastienda, fechaTrastienda , #{luisAlberto,joaquin,lucia} ) {}
-  
   }
  

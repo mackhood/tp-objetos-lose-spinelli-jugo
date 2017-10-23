@@ -93,4 +93,15 @@ method seVendioEl75x100toOMas(){
 
 }
 
-
+object  cisne  inherits Cancion (elViento,312, "Hoy el viento 
+  se abrio quedo vacio el aire una vez mas y el manantial broto y
+  nadie esta aqui y puedo ver que solo estallan las hojas al brillar", joaquin)  {}
+  
+object  aliciaEnElPaís  inherits Cancion (elViento, 510, "Quién sabe Alicia, este 
+  país no estuvo hecho porque sí. Te vas a ir, vas a salir pero te quedas, 
+  ¿dónde más vas a ir? Y es que aquí, sabes el trabalenguas, trabalenguas, 
+  el asesino te asesina, y es mucho para ti. Se acabó ese juego que te hacía feliz.", luisAlberto) {}
+   
+object laFamilia  inherits Cancion  (laFamilia,264,  "Quiero brindar por mi gente sencilla, por el amor 
+  brindo por la familia", lucia)  {}
+  
