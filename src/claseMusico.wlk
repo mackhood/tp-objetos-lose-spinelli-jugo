@@ -79,10 +79,11 @@ var palabraCantaBien
 		}
 }
 	class Palabreros inherits Musico {
-		method interpretaBien(unaCancion, unaPalabra){ 
-		return canción.tieneLaPalabra(unaPalabra)
+  		method interpretaBien(unaCancion, unaPalabra)
+		{ 
+		 return unaCancion.tieneLaPalabra(unaPalabra)
+ 		}
 	}
-
 
 	class Largueros inherits Musico{
 		method interpretaBien(unaCancion,segundos) 
