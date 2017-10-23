@@ -22,3 +22,13 @@ object criterioPorDuracion {
 		}
 }
 
+object criterioPorTitulo {
+		method comparar(unaCancion, otraCancion){
+			if(unaCancion.palabras_titulo() > otraCancion.palabras_titulo()){
+				return unaCancion}
+				else {
+					return otraCancion
+				}
+			}
+		
+}
