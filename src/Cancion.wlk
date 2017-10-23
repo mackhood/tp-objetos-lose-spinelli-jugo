@@ -51,6 +51,12 @@ class Cancion {
 	}
 	
 	
+	method tieneLaPalabra(palabra){ 
+	return self.contains(palabra)
+	}
+	
+	
+	
 	method remix () = new Cancion(duracion*3 ,"mueve tu cuelpo baby "+ letra +" yeah oh yeah",titulo,autor)
 	
 	
