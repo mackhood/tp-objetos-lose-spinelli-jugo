@@ -5,7 +5,7 @@ class Musico {
 	var tocaEnGrupo 
 	var habilidad
 	var cancionesPropias = #{}
-	var metododoCobro
+	var metodoCobro
 constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria,unMetodoCobro){
 		tocaEnGrupo = sTocaEnGrupo
 		habilidad = unaHabilidad
@@ -62,7 +62,7 @@ metodoCobro=otroMetodoCobro
 
 class MusicoDeGrupo inherits Musico {
 var habilidadDeGrupo
-constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,unaHabilidadDeGrupo, cancionesDeAutoria) =  super(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria) {
+constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,unaHabilidadDeGrupo, cancionesDeAutoria, unMetodoCobro) =  super(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria, unMetodoCobro) {
 habilidadDeGrupo = unaHabilidadDeGrupo
  }
 
@@ -80,7 +80,7 @@ return unaCancion.duraMasQue(300)
 class MusicoVocalista inherits Musico {
 var palabraCantaBien
 
-  constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,laPalabra, cancionesDeAutoria) = super(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria) {
+  constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes,laPalabra, cancionesDeAutoria, unMetodoCobro) = super(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria, unMetodoCobro) {
         palabraCantaBien = laPalabra
     }
 
@@ -111,7 +111,7 @@ var palabraCantaBien
  	                return unaCancion.duracion().odd()
  	        }
  	}
-}
+
 
 
 
