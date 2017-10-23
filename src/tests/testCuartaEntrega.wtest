@@ -1,1 +1,20 @@
+import artistas.*
+import Cancion.*
+import claseMusico.*
+import Presentaciones.*
+import claseEstadio.*
 
+describe "Tests de la entrega 4"{ 
+
+	}
+	
+	test "el Costo de la Presentacion en La Cueva es de 8582"{
+		assert.equals(presentacionlaCueva.costoDeLaPresentacion(),8582)
+	}
+	test "el Costo de la Presentacion en Prim D'Ami es de 10550"{
+		assert.equals(presentacionPrixDAmi.costoDeLaPresentacion(),10550)
+	}
+	test "kike interpreta bien la cancion crisantemo"{
+		assert.that(kike.ejecutaBienUnaCancion(crisantemo))
+	}
+}
