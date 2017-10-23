@@ -95,3 +95,14 @@ method interpretaBien(unaCancion,segundos) {
 return unaCancion.duraMasQue(segundos) 
 }
 }
+
+class Impareros inherits Musico {
+	method interpretaBien(unaCancion) {
+	return unaCancion.duracion().odd()
+	}
+	}
+
+
+
+
+
