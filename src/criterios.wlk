@@ -10,3 +10,15 @@ object criterioPorLetra {
 			}
 		}
 	}
+
+object criterioPorDuracion {
+		method comparar(unaCancion, otraCancion){
+			if(unaCancion.duracion() > otraCancion.duracion()){
+				return unaCancion
+			}
+			else {
+				return otraCancion
+			}
+		}
+}
+
