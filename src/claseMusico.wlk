@@ -92,11 +92,12 @@ var palabraCantaBien
 		}
 	}
 
-	class Impareros inherits Musico 
-	{
-		method interpretaBien(unaCancion) {
-		return unaCancion.duracion().odd()
-	}
+	class Impareros inherits Musico {
+ 	        override method interpretaBien(unaCancion) 
+                {
+ 	                return unaCancion.duracion().odd()
+ 	        }
+ 	}
 }
 
 
