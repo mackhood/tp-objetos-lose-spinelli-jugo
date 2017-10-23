@@ -3,7 +3,7 @@ class Estadio {
 var nombre
 var capacidad
 
-constructor (unNombre, unaCapacidad) ={ 
+constructor (unNombre, unaCapacidad) { 
 nombre = unNombre
 capacidad = unaCapacidad
 }
