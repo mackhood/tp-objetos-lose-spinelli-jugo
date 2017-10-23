@@ -5,12 +5,13 @@ class Musico {
 	var tocaEnGrupo 
 	var habilidad
 	var cancionesPropias = #{}
-
-constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria){
+	var metododoCobro
+constructor(sTocaEnGrupo, unaHabilidad, unosAlbumes, cancionesDeAutoria,unMetodoCobro){
 		tocaEnGrupo = sTocaEnGrupo
 		habilidad = unaHabilidad
 		albumes= unosAlbumes
 		cancionesPropias = cancionesDeAutoria
+		metodoCobro = unMetodoCobro
 	}
 method abandonarGrupo()
 {
@@ -44,6 +45,18 @@ method interpretaBien(unaCancion){
 method agregarAlbum (unAlbum) {
 albumes.add(unAlbum)
 }	
+
+
+method cobro(){
+
+return metodoCobro.cobrar()
+}
+
+method cambiarMetodoCobrar (otroMetodoCobro) {
+
+metodoCobro=otroMetodoCobro
+}
+
 
 }
 
