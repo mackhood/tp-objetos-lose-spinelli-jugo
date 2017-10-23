@@ -1,5 +1,6 @@
-import Musico.*
-import Presentacion.*
+import claseMusico.*
+import Presentaciones.*
+
 object segunPersonas{
  method cobra(presentacion){
   return presentacion.artistas().size()*100
@@ -8,7 +9,7 @@ object segunPersonas{
 
 
 object segunCapacidad{
- method cobra(presentacion,capacidad){
+ method cobra(presentacion,capacidad, cantidadCualquiera){
   if(presentacion.cantidadPersonas()>capacidad){
    return cantidadCualquiera
   } else return cantidadCualquiera-100
@@ -18,7 +19,7 @@ object segunCapacidad{
 
 
 object segunExpectativaInflacionaria{
- method cobra(presentacion,fecha,otraFecha,porcentajeAdicional,cobro){
+ method cobra(presentacion,fecha,otraFecha,porcentajeAdicional,cobro, precio){
  if (fecha<otraFecha) {
   return precio + precio*porcentajeAdicional/100
  }
@@ -27,3 +28,9 @@ object segunExpectativaInflacionaria{
  return cobro
  }
 }
+}
+
+object segunEl{
+	
+}
+
