@@ -84,7 +84,7 @@ method duracionTotal(){
 }
 
 method laCancionMasLarga(){
-		return canciones.max{ cancion => cancion.letras()}
+		return canciones.max{ cancion => cancion.tamanioDeLetra()}
 	}
 
 method seVendioEl75x100toOMas(){
