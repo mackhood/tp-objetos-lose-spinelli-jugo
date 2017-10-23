@@ -1,7 +1,8 @@
 import Cancion.*
 import Presentaciones.*
 import claseMusico.*
-object joaquin inherits MusicoDeGrupo (true, 20, #{},5) {
+import maneraDeCobrar.*
+object joaquin inherits MusicoDeGrupo (true, 20, #{}, 5, #{}, segunPersonas) {
 	var grupo = "Pimpinela"
 	
 	
@@ -13,7 +14,7 @@ object joaquin inherits MusicoDeGrupo (true, 20, #{},5) {
 	else {  return habilidad
 	} }    (NO SE REEMPLAZARIA CON LA HABILIDAD DE MUSICO DE GRUPO?)  */
 	
-	method interpretaBien(unaCancion){
+	override method interpretaBien(unaCancion){
 		return unaCancion.duraMasQue(300)
 		
 	}
@@ -26,7 +27,7 @@ object joaquin inherits MusicoDeGrupo (true, 20, #{},5) {
 	}
 }
 
-object lucia inherits MusicoVocalista  (true, 70, #{},"familia"){
+object lucia inherits MusicoVocalista  (true, 70, #{}, #{},"familia", segunCapacidad){
 	var grupo = "Pimpinela"
 	
 	method cantaPresentacion (unaPresentacion) {
@@ -49,7 +50,7 @@ object lucia inherits MusicoVocalista  (true, 70, #{},"familia"){
 	
 }
 
-object luisAlberto inherits Musico (true,0,#{}) {
+object luisAlberto inherits Musico (true,0,#{},#{}, segunEl) {
 	
 	var valorDeLaGuitarra
 	
@@ -64,7 +65,7 @@ object luisAlberto inherits Musico (true,0,#{}) {
 	return 100.min(8*valorDeLaGuitarra)
 		}
 	
-	method interpretaBien(unaCancion){
+	override method interpretaBien(unaCancion){
 		return true
 	}
 	
@@ -114,9 +115,9 @@ object luisAlberto inherits Musico (true,0,#{}) {
 }
 
 
-object kike inherits MusicoDeGrupo (true,60,#{},20) {
+object kike inherits MusicoDeGrupo (true,60,#{},20, #{}, segunExpectativaInflacionaria) {
 
 }
 
-object soledad inherits MusicoVocalista (false,55,#{},"amor") {
+object soledad inherits MusicoVocalista (false,55,#{},"amor", #{}, segunPersonas) {
 }
