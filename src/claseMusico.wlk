@@ -79,3 +79,14 @@ override method interpretaBien(unaCancion){
 	return unaCancion.contiene(palabraCantaBien) 
 	}
 }
+
+
+class Palabreros inherits Musico {
+
+
+method interpretaBien(unaCancion, unaPalabra){ 
+return canción.tieneLaPalabra(unaPalabra)
+}
+
+
+
