@@ -73,34 +73,30 @@ var palabraCantaBien
 
 
 
-override method interpretaBien(unaCancion){
-	
-	super(unaCancion)
-	return unaCancion.contiene(palabraCantaBien) 
+	override method interpretaBien(unaCancion){
+		super(unaCancion)
+		return unaCancion.contiene(palabraCantaBien) 
+		}
+}
+	class Palabreros inherits Musico {
+		method interpretaBien(unaCancion, unaPalabra){ 
+		return canción.tieneLaPalabra(unaPalabra)
+	}
+
+
+	class Largueros inherits Musico{
+		method interpretaBien(unaCancion,segundos) 
+		{
+			return unaCancion.duraMasQue(segundos) 
+		}
+	}
+
+	class Impareros inherits Musico 
+	{
+		method interpretaBien(unaCancion) {
+		return unaCancion.duracion().odd()
 	}
 }
-
-
-class Palabreros inherits Musico {
-
-
-method interpretaBien(unaCancion, unaPalabra){ 
-return canción.tieneLaPalabra(unaPalabra)
-}
-
-
-class Largueros inherits Musico {
-
-method interpretaBien(unaCancion,segundos) {
-return unaCancion.duraMasQue(segundos) 
-}
-}
-
-class Impareros inherits Musico {
-	method interpretaBien(unaCancion) {
-	return unaCancion.duracion().odd()
-	}
-	}
 
 
 
