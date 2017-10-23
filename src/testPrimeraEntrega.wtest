@@ -1,0 +1,139 @@
+import artistas.*
+import Cancion.*
+import Presentaciones.*
+import claseMusico.*
+
+
+describe "Tests de los artistas" {
+	var joaquin = new MusicoDeGrupo("Pimpinela", 20, #{}, 5)
+	var laFamilia = new Cancion("La Familia", 264,"Quiero brindar por mi gente sencilla, por el amor brindo por la familia")
+	var cisne = new Cancion("Cisne", 312,"Hoy el viento se abrió quedó vacío el aire una vez más y el manantial brotó y nadie está aquí y puedo ver que solo estallan las hojas al brillar")
+	var laTrastienda = new Presentacion(400, new Date(15, 11, 2017), #{luisAlberto, joaquin, lucia})
+  	var lunapark = new Presentacion(9290, new Date(20, 04, 2017), #{luisAlberto, joaquin, lucia})
+  
+  test "conocer la habilidad de JoaquÃ­n, que canta en el grupo Pimpinela"
+  {
+    assert.equals(25, joaquin.habilidad())
+  }
+  
+  test "ver habilidad de JoaquÃ­n ahora que no estÃ¡ en Pimpinela"
+  {
+    joaquin.abandonarGrupo()
+    assert.equals(20, joaquin.habilidad())
+  }
+  
+  test "conocer la habilidad de Lucia, quien estÃ¡ en Pimpinella"
+  {
+    assert.equals(50, lucia.habilidad())
+  }
+  
+  test "ver habilidad de lucia ahora que no estÃ¡ en Pimpinela"
+  {
+    lucia.abandonarGrupo()
+    assert.equals(70, lucia.habilidad())
+  }
+  
+  test "ver la habilidad de Luis Alberto cuando toca la Fender"
+  {
+    luisAlberto.valorGuitarra(fender)
+    assert.equals(80, luisAlberto.calcularHabilidad())
+  }
+  
+  test "ahora Luis toca con la Gibson sana"
+  {
+    luisAlberto.valorGuitarra(gibson)
+    assert.equals(100, luisAlberto.calcularHabilidad())
+  }
+  
+  test "alguien rompe la gibson y tiene que tocar"
+  {
+    gibson.romper()
+    luisAlberto.valorGuitarra(gibson)
+    assert.equals(40, luisAlberto.calcularHabilidad())
+  }
+  
+  test "saber si joaquin interpreta bien Â´La FamiliaÂ´"
+  {
+    assert.equals(false, joaquin.interpretaBien(laFamilia))
+  }
+  
+  test "saber si joaquin interpreta bien Â´ElCisneÂ´"
+  {
+    assert.equals(true, joaquin.interpretaBien(cisne))
+  }
+  
+  test "saber si lucia interpreta bien Â´La FamiliaÂ´"
+  {
+    assert.equals(true, lucia.interpretaBien(laFamilia))
+  }
+  
+  test "saber si lucia interpreta bien Â´El CisneÂ´"
+  {
+    assert.equals(false, lucia.interpretaBien(cisne))
+  }
+  
+  test "saber si luis alberto interpreta bien Â´La FamiliaÂ´"
+  {
+    assert.equals(true, luisAlberto.interpretaBien(laFamilia))
+  }
+  
+  test "saber si luis alberto interpreta bien Â´El CisneÂ´"
+  {
+    assert.equals(false, luisAlberto.interpretaBien(cisne))
+  }
+
+  test "saber cuanto cobra joaquin en Luna Park"
+  {
+    assert.equals(40, joaquin.cobra(lunapark))
+  }
+  
+  test "saber cuanto cobra joaquin en Trastienda si canta solo"
+  {
+    laTrastienda.tomarElEscenario(joaquin)
+    assert.equals(100, joaquin.cobra(laTrastienda))
+  }
+  
+  test "saber la capacidad de la trastienda el dia 05 de agosto del 2017"
+  {
+    const fechaTrastienda = new Date (05,08,17)
+    assert.equals(700, laTrastienda.capacidad())
+  }
+  
+  test "saber la capacidad de la trastienda el dia 08 de agosto del 2017"
+  {
+    const fechaTrastienda = new Date (08,08,17)
+    assert.equals(400, laTrastienda.capacidad())
+  }
+  
+  test "saber cuanto cobra lucia en Luna Park"
+  {
+    assert.equals(500, lucia.cobra(lunapark))
+  }
+  
+  test "saber cuanto cobra lucia en Trastienda"
+  {
+    assert.equals(400, lucia.cobra(laTrastienda))
+  }
+  
+  test "saber cuanto cobra luis alberto en Luna Park"
+  {
+    assert.equals(1000, luisAlberto.cobra(lunapark))
+  }
+  
+  test "saber cuanto cobra luis alberto en Trastienda"
+  {
+    assert.equals(1200, luisAlberto.cobra(laTrastienda))
+  }
+  
+  test "calcular el costo total de la presentaciÃ³n del luna park"
+  {
+    assert.equals(1550, lunapark.costoPresentacion())
+  }
+  
+  test "calcular el costo total de la presentaciÃ³n de la trastienda el 15/11/17"
+  {
+    const fechaTrastienda = new Date (15,11,17)
+    assert.equals(1650, laTrastienda.costoPresentacion())
+  }
+  
+  }
