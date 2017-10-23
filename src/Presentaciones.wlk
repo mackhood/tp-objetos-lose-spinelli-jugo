@@ -1,4 +1,6 @@
 import artistas.*
+import Cancion.*
+import claseEstadio.*
 
 class Presentacion {
 	
@@ -6,6 +8,7 @@ class Presentacion {
 	var fecha = new Date()
 	var artistas = #{}
 	var estadio
+	
 	
 	constructor(unEstadio, laFecha, losArtistas){
 		estadio= unEstadio
@@ -41,3 +44,4 @@ class Presentacion {
      
      }
 }
+
